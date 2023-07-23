@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+  <head>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,20 +11,20 @@
           rel="stylesheet" 
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
           crossorigin="anonymous">
-    <title>tennis club</title>
+  <title>tennis club</title>
   </head>
   <body>
     <div class="container">
-        <div class="row ">
-            <div class="col-4"></div>
-            <div class="col">
-            <h1>{{ mymember.firstname }} {{mymember.lastname}}</h1>
-            <p>Phone: {{ mymember.phone }}</p>
-            <p>Since: {{ mymember.joined_data }}</p>
-            <p>Back to <a href="/members">Members</a></p>
-            </div>
-            <div class="col-4"></div>
+      <div class="row ">
+        <div class="col-4"></div>
+        <div class="col">
+          <h1>{{ mymember.firstname }} {{mymember.lastname}}</h1>
+          <p>Phone: {{ mymember.phone }}</p>
+          <p>Since: {{ mymember.joined_data }}</p>
+          <p>Back to <a href="/members">Members</a></p>
         </div>
+        <div class="col-4"></div>
+      </div>
     </div>
   </body>
 </html>
