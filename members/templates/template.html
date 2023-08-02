@@ -3,12 +3,14 @@
     <body>
       <div style="text-align: center;">
 
-          {% for x in fruits %}
-          <h1> {{x}} </h1>
+        <ul style="list-style: none;">
+          {% for x in mymembers %}
+          <li>
+            {{ x.firstname }} {{ x.lastname }}
+          </li>
           {% endfor %}
-          
-          <p>In views.py you can see what the fruits variable looks like.</p>
-          
+        </ul> 
+
       </div>
     </body>
 </html>
