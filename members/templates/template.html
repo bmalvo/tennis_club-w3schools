@@ -9,7 +9,21 @@
             {{ x.firstname }} {{ x.lastname }}
           </li>
           {% endfor %}
-        </ul> 
+        </ul>
+        
+        <div>
+          
+          {% with greeting=3 %}
+          {% if greeting == 1 %}
+          <p style="color: red;">greeting is one</p>
+          {% elif greeting == 2 %}
+          <p style="color: red;">greeting is two</p>
+          {% else %}
+          <p style="color: red;">greeting is... who knows?</p>
+          {% endif %}
+          {% endwith %}
+
+        </div>
 
       </div>
     </body>
