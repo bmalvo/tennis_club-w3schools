@@ -3,12 +3,40 @@
     <body>
       <div style="text-align: center;">
 
-          {% for x in fruits %}
-          <h1> {{x}} </h1>
+        <ul style="list-style: none;">
+          {% for x in mymembers %}
+          <li>
+            {{ x.firstname }} {{ x.lastname }}
+          </li>
           {% endfor %}
+        </ul>
+        
+        <div>
           
-          <p>In views.py you can see what the fruits variable looks like.</p>
-          
+          {% with greeting=3 %}
+          {% if greeting == 1 %}
+          <p style="color: red;">greeting is one</p>
+          {% elif greeting == 2 %}
+          <p style="color: red;">greeting is two</p>
+          {% else %}
+          <p style="color: red;">greeting is... who knows?</p>
+          {% endif %}
+          {% endwith %}
+
+        </div>
+
+        <div>
+          {% for x in mymembers reversed %}
+          <h1>{{ x.id }}</h1>
+          <p>{{ x.lastname }} tel: {# this a comment in a code #}{{ x.phone }}</p>
+          {% empty %}
+          <p>No members</p>
+          {% endfor %}
+          {% comment 'this is a comment to comment' %}
+          <p>this paragraph will be commended and no visable</p>
+          {% endcomment %}
+        </div>
+        {% include 'footer.html' %}
       </div>
     </body>
 </html>
