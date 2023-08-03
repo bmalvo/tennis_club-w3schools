@@ -25,6 +25,15 @@
 
         </div>
 
+        <div>
+          {% for x in mymembers reversed %}
+          <h1>{{ x.id }}</h1>
+          <p>{{ x.lastname }} tel: {{ x.phone }}</p>
+          {% empty %}
+          <p>No members</p>
+          {% endfor %}
+        </div>
+
       </div>
     </body>
 </html>
