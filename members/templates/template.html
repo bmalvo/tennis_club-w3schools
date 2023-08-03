@@ -28,10 +28,13 @@
         <div>
           {% for x in mymembers reversed %}
           <h1>{{ x.id }}</h1>
-          <p>{{ x.lastname }} tel: {{ x.phone }}</p>
+          <p>{{ x.lastname }} tel: {# this a comment in a code #}{{ x.phone }}</p>
           {% empty %}
           <p>No members</p>
           {% endfor %}
+          {% comment 'this is a comment to comment' %}
+          <p>this paragraph will be commended and no visable</p>
+          {% endcomment %}
         </div>
 
       </div>
