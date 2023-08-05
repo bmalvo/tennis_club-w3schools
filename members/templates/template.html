@@ -1,5 +1,6 @@
 {% extends 'master.html' %}
 {% block content %}
+<h2>Table for Members</h2>
       <table class="table table-hover">
         <thead>
           <tr>
@@ -18,5 +19,11 @@
           {% endfor %}
         </tbody>
       </table>
+<h2>QuerySet for Members</h2>
+      {{ all_values }}
+<h2>Lists all first names in Members</h2>
+      {{ first_names }}
+<h2>Filter by specific name</h2>
+      {{ filtered_name }}
       {% include 'footer.html' %}
 {% endblock %}

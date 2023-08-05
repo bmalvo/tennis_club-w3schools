@@ -24,8 +24,14 @@ def main(request):
 
 def testing(request):
     mydata = Member.objects.all()
+    all_values = Member.objects.all().values()
+    first_names = Member.objects.values_list('firstname')
+    filtered_name = Member.objects.filter(firstname='Makary').values()
     template = loader.get_template('template.html')
     context = {
         'mymembers': mydata,
+        'all_values': all_values,
+        'first_names': first_names,
+        'filtered_name':filtered_name,
     }
     return HttpResponse(template.render(context, request))
